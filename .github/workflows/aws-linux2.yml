@@ -1,8 +1,8 @@
-name: Azure Python 3.7
+name: AWS Amazon Linux 2 3.7
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: amazonlinux
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.7
@@ -11,10 +11,13 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
-        make install
+        make install-aws-linux2
     - name: Lint
       run: |
         make lint
     - name: Test
       run: |
         make test
+    - name: Format
+      run: |
+        make format
