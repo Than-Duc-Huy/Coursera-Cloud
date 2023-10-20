@@ -4,6 +4,15 @@ install:
 install-local:
 	pip install -r local-requirements.txt
 
+install-gcp:
+	pip install --upgrade pip && pip install -r requirements.txt
+
+install-aws:
+	pip install --upgrade pip && pip install -r requirements.txt
+	
+install-aws-linux2:
+	pip install --upgrade pip && pip install -r requirements.txt
+
 format:
 	black *.py
 
