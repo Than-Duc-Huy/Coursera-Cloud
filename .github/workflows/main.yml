@@ -6,16 +6,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup Python 3.8
-    uses: actions/setup-python@v1
-    with:
-    python-version: 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
     - name: Install Dependencies
-    run: make install
+      run: make install
     - name: Lint with Pylint
-    run: make lint
+      run: make lint
     - name: Test with Pytest
-    run: make test
+      run: make test
     - name: Format code with Python black
-    run: make format
+      run: make format
     
   
