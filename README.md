@@ -9,6 +9,7 @@
 - GCP App Engine
     - `app.yaml`: runtime
     - `cloudbuild.yaml`: command
+    - Entrypoint is usually: `main.py` for python
 - `./github/workflows`: tell workflow to trigger `make` commands
 
 
